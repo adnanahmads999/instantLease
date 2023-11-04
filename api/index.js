@@ -19,10 +19,9 @@ const app = express();
 app.use(express.json());
 
 
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT, () => {
     console.log(`listening on http://localhost:${process.env.PORT}`);
 })
-
 app.use("/api/user",userRouter);
 app.use("/api/auth",authRouter);
 
